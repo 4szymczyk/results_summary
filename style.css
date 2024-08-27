@@ -34,7 +34,6 @@
   box-sizing: border-box;
   font-family: "Hanken Grotesk", sans-serif;
 }
-
 body {
   width: 100vw;
   height: 100vh;
@@ -67,19 +66,19 @@ body {
 .results_container .your_results_header {
   color: var(--light_lavender);
 }
-
 .results_container .results_points {
   width: 150px;
   height: 150px;
-  padding: 32px 0;
   background: linear-gradient(
     180deg,
     var(--violet_blue_circle) 0%,
     var(--persian_blue_circle) 100%
   );
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .results_points .results_points_got {
   font-size: 48px;
   font-weight: var(--fw_900);
@@ -88,13 +87,11 @@ body {
 .results_points .results_points_max {
   color: var(--light_lavender_opacity);
 }
-
 .results_container .results_points_grade {
   font-size: 24px;
   font-weight: var(--fw_700);
   color: var(--white);
 }
-
 .results_container .results_points_info {
   font-size: 16px;
   color: var(--light_lavender_opacity);
@@ -128,7 +125,6 @@ body {
 .summary_container .summary_item .summary_item_icon img {
   padding-right: 10px;
 }
-
 .summary_container .summary_item .summary_item_points_got {
   color: var(--dark_gray_blue);
   font-weight: var(--fw_800);
@@ -153,7 +149,6 @@ body {
   color: var(--cobalt_blue);
   background-color: var(--cobalt_blue_bg);
 }
-
 .summary_container .continue_button {
   background-color: var(--dark_gray_blue);
   color: var(--white);
@@ -166,7 +161,7 @@ body {
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
   body {
     display: flex;
     align-items: center;
@@ -176,8 +171,8 @@ body {
     display: flex;
     flex-direction: row;
     height: auto;
-    box-shadow: 15px 15px 20px 3px var(--pale_blue);
-    gap: 12px;
+    box-shadow: 16px 16px 20px 3px var(--pale_blue);
+    gap: 6px;
   }
   .results_container {
     border-radius: 32px;
@@ -185,22 +180,24 @@ body {
     width: 320px;
     height: 450px;
   }
+  .results_container .results_points {
+    width: 180px;
+    height: 180px;
+  }
+  .results_container .results_points_info {
+    padding-bottom: 24px;
+  }
   .summary_container {
-    padding: 24px 32px;
+    padding: 32px 32px;
     gap: 14px;
     width: 320px;
     height: 450px;
   }
+  .summary_container .summary_header {
+    padding: 0 0 8px 0;
+  }
   .summary_container .summary_item {
-    padding: 14px 10px;
-  }
-  .results_container .results_points {
-    width: 180px;
-    height: 180px;
-    padding: 48px 0;
-  }
-  .results_container .results_points_info {
-    padding-bottom: 24px;
+    padding: 14px 12px;
   }
   .summary_container .continue_button {
     padding: 14px;
