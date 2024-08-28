@@ -177,6 +177,7 @@ body {
   font-size: 18px;
   font-weight: var(--fw_500);
   margin-top: auto;
+  cursor: pointer;
 }
 
 /* MEDIA QUERIES */

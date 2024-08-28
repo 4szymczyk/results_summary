@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="scipt.js"></script>
 
     <title>Frontend Mentor | Results summary component</title>
   </head>
@@ -27,7 +28,7 @@
         <div class="results_container">
           <h3 class="results_container__header">Your Result</h3>
           <div class="results_points">
-            <p class="results_points__got">76</p>
+            <p class="results_points__got" id="result_points">100</p>
             <p class="results_points__max">of 100</p>
           </div>
           <p class="results_points__grade">Great</p>
@@ -46,7 +47,9 @@
             Reaction
           </p>
           <p>
-            <span class="summary_item__points_got">80</span>
+            <span class="summary_item__points_got" id="reaction_points"
+              >100</span
+            >
             <span class="summary_item__points_max">/ 100</span>
           </p>
         </div>
@@ -56,7 +59,7 @@
             <img src="assets/images/icon-memory.svg" alt="Memory icon" /> Memory
           </p>
           <p>
-            <span class="summary_item__points_got">92</span>
+            <span class="summary_item__points_got" id="memory_points">100</span>
             <span class="summary_item__points_max">/ 100</span>
           </p>
         </div>
@@ -67,7 +70,7 @@
             Verbal
           </p>
           <p>
-            <span class="summary_item__points_got">61</span>
+            <span class="summary_item__points_got" id="verbal_points">100</span>
             <span class="summary_item__points_max">/ 100</span>
           </p>
         </div>
@@ -77,12 +80,12 @@
             <img src="assets/images/icon-visual.svg" alt="Visual icon" /> Visual
           </p>
           <p>
-            <span class="summary_item__points_got">72</span>
+            <span class="summary_item__points_got" id="visual_points">100</span>
             <span class="summary_item__points_max">/ 100</span>
           </p>
         </div>
 
-        <button class="continue_button">Continue</button>
+        <button class="continue_button" onclick="randomize()">Randomize</button>
       </div>
     </div>
   </body>
